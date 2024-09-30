@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "cpp_network_programming_cli_chat_app_server_side",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "cpp_network_programming_cli_chat_app_server_side::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cpp_network_programming_cli_chat_app_server_side-Debug-0b0d3d2481dbffa80e98.json",
+					"name" : "cpp_network_programming_cli_chat_app_server_side",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/cmake-build-debug",
+		"source" : "/Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
