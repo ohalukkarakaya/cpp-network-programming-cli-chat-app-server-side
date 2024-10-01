@@ -2,8 +2,8 @@
 // Created by Ö. Haluk KARAKAYA on 30.09.2024.
 //
 
-#ifndef CPP_NETWORK_PROGRAMMING_CLI_CHAT_APP_SERVER_SIDE_ROOM_MEMBER_H
-#define CPP_NETWORK_PROGRAMMING_CLI_CHAT_APP_SERVER_SIDE_ROOM_MEMBER_H
+#ifndef ROOM_MEMBER_H
+#define ROOM_MEMBER_H
 
 #include <iostream>
 #include <string>
@@ -25,4 +25,4 @@ private:
     time_t joinDate;
 };
 
-#endif //CPP_NETWORK_PROGRAMMING_CLI_CHAT_APP_SERVER_SIDE_ROOM_MEMBER_H
+#endif //ROOM_MEMBER_H

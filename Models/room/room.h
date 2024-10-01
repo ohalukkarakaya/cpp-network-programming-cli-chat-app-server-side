@@ -2,8 +2,8 @@
 // Created by Ö. Haluk KARAKAYA on 30.09.2024.
 //
 
-#ifndef CPP_NETWORK_PROGRAMMING_CLI_CHAT_APP_SERVER_SIDE_ROOM_H
-#define CPP_NETWORK_PROGRAMMING_CLI_CHAT_APP_SERVER_SIDE_ROOM_H
+#ifndef ROOM_H
+#define ROOM_H
 
 #include <iostream>
 #include <vector>
@@ -20,7 +20,7 @@ public:
     void userJoined(const std::string& mainUserId, const std::string& userId, const std::string& userIp);
     void userLeft(const std::string& userId);
     [[nodiscard]] const std::string& getRoomId() const;
-    const std::vector<RoomMember>& getMembers() const;
+    [[nodiscard]] const std::vector<RoomMember>& getMembers() const;
 
     std::optional<RoomMember> findUser(const std::string& userId);
     void updateUserIp( const std::string& userId, const std::string& newIp );
@@ -30,4 +30,4 @@ private:
     std::vector<RoomMember> members;
 };
 
-#endif //CPP_NETWORK_PROGRAMMING_CLI_CHAT_APP_SERVER_SIDE_ROOM_H
+#endif //ROOM_H
