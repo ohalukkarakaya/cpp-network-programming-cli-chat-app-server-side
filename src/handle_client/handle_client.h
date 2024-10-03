@@ -8,6 +8,7 @@
 #include <iostream>
 #include <unistd.h>
 
+#include "../scokets_helper/sockets_helper.h"
 #include "../process_request/process_request.h"
 
 void handleClient( int clientSocket )

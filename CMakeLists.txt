@@ -16,4 +16,6 @@ add_executable(cpp_network_programming_cli_chat_app_server_side main.cpp
         src/process_request/process_request.cpp
         include/global_variables.h
         Models/request_type_enum/request_type_enum.h
-        Models/request_type_enum/request_type_enum.cpp)
+        Models/request_type_enum/request_type_enum.cpp
+        src/scokets_helper/sockets_helper.h
+        src/scokets_helper/sockets_helper.cpp)

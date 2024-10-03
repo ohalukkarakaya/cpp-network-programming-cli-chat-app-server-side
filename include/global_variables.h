@@ -9,5 +9,6 @@
 
 std::vector<Room> active_rooms;
 std::mutex roomMutex;
+bool running = true;
 
 #endif //GLOBAL_VARIABLES_H

@@ -23,7 +23,7 @@ void processRequest(int clientSocket, const std::string& request)
 
         Command cmdType = getCommandType(command);
 
-        switch(cmdType)
+        switch( cmdType )
         {
             case JOINROOM:
             {
@@ -60,7 +60,7 @@ void processRequest(int clientSocket, const std::string& request)
             }
             case LEAVEROOM:
             {
-                for (auto& room : active_rooms)
+                for (Room& room : active_rooms)
                 {
                     if (room.getRoomId() == roomId)
                     {

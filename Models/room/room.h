@@ -12,18 +12,22 @@
 
 #include "../room_member/room_member.h"
 #include "../../src/send_to_ip/send_to_ip.h"
+#include "../../src/scokets_helper/sockets_helper.h"
 
 class Room {
 public:
     Room(const std::string& id);
 
-    void userJoined(const std::string& mainUserId, const std::string& userId, const std::string& userIp);
+    void userJoined(const std::string& userId, const std::string& userIp);
+    void notifyUsers(const RoomMember& newRoomMember, std::string type = "JOIN");
+
     void userLeft(const std::string& userId);
-    [[nodiscard]] const std::string& getRoomId() const;
-    [[nodiscard]] const std::vector<RoomMember>& getMembers() const;
+    void updateUserIp( const std::string& userId, const std::string& newIp );
 
     std::optional<RoomMember> findUser(const std::string& userId);
-    void updateUserIp( const std::string& userId, const std::string& newIp );
+
+    [[nodiscard]] const std::string& getRoomId() const;
+    [[nodiscard]] const std::vector<RoomMember>& getMembers() const;
 
 private:
     std::string roomId;

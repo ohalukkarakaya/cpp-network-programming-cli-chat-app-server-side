@@ -6,12 +6,53 @@
 
 Room::Room(const std::string& id) : roomId(id) {}
 
-void Room::userJoined(const std::string& mainUserId, const std::string& userId, const std::string& userIp)
+void Room::userJoined(const std::string& userId, const std::string& userIp)
 {
-    members.emplace_back(userId, userIp);
-    if( mainUserId != userId )
+    RoomMember newRoomMember = RoomMember( userId, userIp );
+    members.push_back(newRoomMember);
+
+    notifyUsers(newRoomMember, "JOIN");
+}
+
+void Room::notifyUsers(const RoomMember& newRoomMember, const std::string type)
+{
+    for (const auto& member : members)
     {
-        std::cout << "\033[33m" << userId << "\033[1;34m" << " joined chat in room " << "\033[33m" << roomId << "\033[0m" << std::endl;
+        if (member.getUserId() != newRoomMember.getUserId())
+        {
+            int sock = 0;
+            struct sockaddr_in serv_addr;
+
+            if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0)
+            {
+                std::cerr << "Socket creation error for user: " << member.getUserId() << std::endl;
+                continue;
+            }
+
+            serv_addr.sin_family = AF_INET;
+            serv_addr.sin_port = htons(8080);
+
+            if (inet_pton(AF_INET, member.getUserIp().c_str(), &serv_addr.sin_addr) <= 0)
+            {
+                std::cerr << "Invalid address / Address not supported for user: " << member.getUserId() << std::endl;
+                closeSocket(sock);
+                continue;
+            }
+
+            if (connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0)
+            {
+                std::cerr << "Connection failed for user: " << member.getUserId() << std::endl;
+                closeSocket(sock);
+                continue;
+            }
+
+            std::string message = "type: " + type + ",userId: " + newRoomMember.getUserId() + ",userIp: " + newRoomMember.getUserIp();
+
+            send(sock, message.c_str(), message.size(), 0);
+            std::cout << "Notification sent to user: " << member.getUserId() << std::endl;
+
+            closeSocket(sock);
+        }
     }
 }
 
@@ -38,14 +79,16 @@ void Room::userLeft(const std::string& userId)
     }
 }
 
-const std::string& Room::getRoomId() const
+void Room::updateUserIp( const std::string& userId, const std::string& newIp )
 {
-    return roomId;
-}
+    std::optional<RoomMember> optionalMember = findUser(userId);
+    if (!optionalMember)
+    {
+        return;
+    }
 
-const std::vector<RoomMember>& Room::getMembers() const
-{
-    return members;
+    RoomMember member = optionalMember.value();
+    member.updateIp( newIp );
 }
 
 std::optional<RoomMember> Room::findUser( const std::string &userId )
@@ -61,14 +104,12 @@ std::optional<RoomMember> Room::findUser( const std::string &userId )
     return std::nullopt;
 }
 
-void Room::updateUserIp( const std::string& userId, const std::string& newIp )
+const std::string& Room::getRoomId() const
 {
-    std::optional<RoomMember> optionalMember = findUser(userId);
-    if (!optionalMember)
-    {
-        return;
-    }
+    return roomId;
+}
 
-    RoomMember member = optionalMember.value();
-    member.updateIp( newIp );
+const std::vector<RoomMember>& Room::getMembers() const
+{
+    return members;
 }
