@@ -11,6 +11,6 @@
 #include "../scokets_helper/sockets_helper.h"
 #include "../process_request/process_request.h"
 
-void handleClient( int clientSocket )
+void handleClient( int clientSocket );
 
 #endif //HANDLE_CLIENT_H

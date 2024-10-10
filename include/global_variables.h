@@ -5,10 +5,12 @@
 #ifndef GLOBAL_VARIABLES_H
 #define GLOBAL_VARIABLES_H
 
+class Room;
+
 #include "../Models/room/room.h"
 
-std::vector<Room> active_rooms;
-std::mutex roomMutex;
-bool running = true;
+inline std::vector<Room> active_rooms;
+inline std::mutex roomMutex;
+inline bool running = true;
 
 #endif //GLOBAL_VARIABLES_H

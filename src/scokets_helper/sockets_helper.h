@@ -17,7 +17,7 @@
 
 void initSockets();
 
-void closeSocket(int socket_fd);
+void closeSocket( int socket_fd );
 
 void signalHandler( int signum );
 

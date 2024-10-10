@@ -11,49 +11,7 @@ void Room::userJoined(const std::string& userId, const std::string& userIp)
     RoomMember newRoomMember = RoomMember( userId, userIp );
     members.push_back(newRoomMember);
 
-    notifyUsers(newRoomMember, "JOIN");
-}
 
-void Room::notifyUsers(const RoomMember& newRoomMember, const std::string type)
-{
-    for (const auto& member : members)
-    {
-        if (member.getUserId() != newRoomMember.getUserId())
-        {
-            int sock = 0;
-            struct sockaddr_in serv_addr;
-
-            if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0)
-            {
-                std::cerr << "Socket creation error for user: " << member.getUserId() << std::endl;
-                continue;
-            }
-
-            serv_addr.sin_family = AF_INET;
-            serv_addr.sin_port = htons(8080);
-
-            if (inet_pton(AF_INET, member.getUserIp().c_str(), &serv_addr.sin_addr) <= 0)
-            {
-                std::cerr << "Invalid address / Address not supported for user: " << member.getUserId() << std::endl;
-                closeSocket(sock);
-                continue;
-            }
-
-            if (connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0)
-            {
-                std::cerr << "Connection failed for user: " << member.getUserId() << std::endl;
-                closeSocket(sock);
-                continue;
-            }
-
-            std::string message = "type: " + type + ",userId: " + newRoomMember.getUserId() + ",userIp: " + newRoomMember.getUserIp();
-
-            send(sock, message.c_str(), message.size(), 0);
-            std::cout << "Notification sent to user: " << member.getUserId() << std::endl;
-
-            closeSocket(sock);
-        }
-    }
 }
 
 void Room::userLeft(const std::string& userId)

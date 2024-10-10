@@ -14,6 +14,6 @@ enum Command {
     UNKNOWN
 };
 
-Command getCommandType(const std::string& command)
+Command getCommandType(const std::string& command);
 
 #endif //REQUEST_TYPE_ENUM_H
