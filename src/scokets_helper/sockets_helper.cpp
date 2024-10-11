@@ -28,6 +28,7 @@ void closeSocket(int socket_fd)
 
 void signalHandler( int signum )
 {
-    std::cout << "Interrupt signal (" << signum << ") received.\n";
+    std::cout << std::endl;
+    std::cout << BOLD_RED << "Signal (" << signum << ") received. Shutting down..." << RESET << std::endl;
     running = false;
 }

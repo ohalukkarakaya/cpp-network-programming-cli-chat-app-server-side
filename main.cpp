@@ -10,6 +10,8 @@
 
 int main()
 {
+    running = true;
+
     signal(SIGINT, signalHandler);
 
     int server_fd, new_socket;
@@ -29,10 +31,10 @@ int main()
 #if defined(_WIN32) || defined(_WIN64)
     if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, (char*)&opt, sizeof(opt)) != 0)
 #else
-    if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt)) != 0)
+    if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt)) != 0)
 #endif
     {
-        std::cerr << "setsockopt error!" << std::endl;
+        std::cerr << "setsockopt error!" << strerror(errno) << std::endl;
         close(server_fd);
         exit(EXIT_FAILURE);
     }
@@ -59,14 +61,33 @@ int main()
 
     while ( running )
     {
-        if( (new_socket = accept(server_fd, (struct  sockaddr*)&address, (socklen_t*)&addrlen)) < 0 )
-        {
-            std::cerr << "Accept Error!" << std::endl;
-            close(server_fd);
+        // Set timeout for accept
+        fd_set readfds;
+        FD_ZERO(&readfds);
+        FD_SET(server_fd, &readfds);
+
+        struct timeval timeout;
+        timeout.tv_sec = 1; // 1 sec
+        timeout.tv_usec = 0;
+
+        int activity = select(server_fd + 1, &readfds, NULL, NULL, &timeout);
+
+        if (activity < 0) {
+            std::cerr << "Select error!" << std::endl;
             continue;
         }
 
-        std::thread( handleClient, new_socket ).detach();
+        if (FD_ISSET(server_fd, &readfds)) {
+            new_socket = accept(server_fd, (struct sockaddr*)&address, (socklen_t*)&addrlen);
+            if (new_socket < 0) {
+                std::cerr << "Accept Error!" << std::endl;
+                continue;
+            }
+
+            std::thread(handleClient, new_socket).detach();
+        }
+
+        if( !running ) break;
     }
 
     closeSocket(server_fd);
