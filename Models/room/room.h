@@ -19,7 +19,6 @@ public:
     Room(const std::string& id);
 
     void userJoined(const std::string& userId, const std::string& userIp);
-    void notifyUsers(const RoomMember& newRoomMember, std::string type = "JOIN");
 
     void userLeft(const std::string& userId);
     void updateUserIp( const std::string& userId, const std::string& newIp );

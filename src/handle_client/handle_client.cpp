@@ -14,6 +14,6 @@ void handleClient( int clientSocket )
 
     std::string request(buffer);
 
-    processRequest(clientSocket, request);
-    closeSocket(clientSocket);
+    processRequest( clientSocket, request );
+    closeSocket( clientSocket );
 }

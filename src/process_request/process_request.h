@@ -11,6 +11,11 @@
 #include "../../include/global_variables.h"
 #include "../../Models/request_type_enum/request_type_enum.h"
 
+#include "../parse_request/parse_request.h"
+
+#include "../join_room/join_room.h"
+#include "../update_ip/update_ip.h"
+
 void processRequest(int clientSocket, const std::string& request);
 
 #endif //PROCESS_REQUEST_H

@@ -18,4 +18,12 @@ add_executable(cpp_network_programming_cli_chat_app_server_side main.cpp
         Models/request_type_enum/request_type_enum.h
         Models/request_type_enum/request_type_enum.cpp
         src/scokets_helper/sockets_helper.h
-        src/scokets_helper/sockets_helper.cpp)
+        src/scokets_helper/sockets_helper.cpp
+        src/parse_request/parse_request.h
+        src/parse_request/parse_request.cpp
+        Models/request_data/request_data.h
+        Models/request_data/request_data.cpp
+        src/join_room/join_room.h
+        src/join_room/join_room.cpp
+        src/update_ip/update_ip.h
+        src/update_ip/update_ip.cpp)

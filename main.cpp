@@ -59,7 +59,7 @@ int main()
 
     while ( running )
     {
-        if((new_socket = accept(server_fd, (struct  sockaddr*)&address, (socklen_t*)&addrlen)) < 0 )
+        if( (new_socket = accept(server_fd, (struct  sockaddr*)&address, (socklen_t*)&addrlen)) < 0 )
         {
             std::cerr << "Accept Error!" << std::endl;
             close(server_fd);
