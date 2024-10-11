@@ -15,6 +15,7 @@
 
 #include "../join_room/join_room.h"
 #include "../update_ip/update_ip.h"
+#include "../leave_room/leave_room.h"
 
 void processRequest(int clientSocket, const std::string& request);
 

@@ -26,4 +26,6 @@ add_executable(cpp_network_programming_cli_chat_app_server_side main.cpp
         src/join_room/join_room.h
         src/join_room/join_room.cpp
         src/update_ip/update_ip.h
-        src/update_ip/update_ip.cpp)
+        src/update_ip/update_ip.cpp
+        src/leave_room/leave_room.h
+        src/leave_room/leave_room.cpp)

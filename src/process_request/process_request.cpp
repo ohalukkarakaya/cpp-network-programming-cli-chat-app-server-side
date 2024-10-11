@@ -40,16 +40,12 @@ void processRequest(int clientSocket, const std::string& request)
         }
         case LEAVEROOM:
         {
-            for (Room& room : active_rooms)
+            bool didFail = leaveRoom( clientSocket, roomId, userId );
+
+            if( didFail )
             {
-                if (room.getRoomId() == roomId)
-                {
-                    room.userLeft(userId);
-                    send(clientSocket, "User left the room.", 19, 0);
-                    return;
-                }
+                std::cerr << "Error: LAEVE ROOM " << std::endl;
             }
-            send(clientSocket, "Room not found.", 15, 0);
             break;
         }
         case UNKNOWN:
