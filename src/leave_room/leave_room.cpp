@@ -4,7 +4,7 @@
 
 #include "leave_room.h"
 
-bool leaveRoom( const int clientSocket, const std::string& roomId, const std::string& userId )
+bool leaveRoom( int clientSocket, const std::string& roomId, const std::string& userId )
 {
     for( Room& room : active_rooms )
     {
@@ -15,7 +15,6 @@ bool leaveRoom( const int clientSocket, const std::string& roomId, const std::st
 
             return false;
         }
-
-        return true;
     }
+    return true;
 }

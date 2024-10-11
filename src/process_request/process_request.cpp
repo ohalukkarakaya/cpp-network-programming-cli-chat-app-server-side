@@ -19,9 +19,9 @@ void processRequest(int clientSocket, const std::string& request)
     {
         case JOINROOM:
         {
-            bool didFail = joinRoom( clientSocket, roomId, userId, userIp );
+            bool didOperationFailed = joinRoom( clientSocket, roomId, userId, userIp );
 
-            if( didFail )
+            if( didOperationFailed )
             {
                 std::cerr << "Error: JOIN ROOM " << std::endl;
             }
@@ -30,9 +30,9 @@ void processRequest(int clientSocket, const std::string& request)
         case UPDATEIP:
         {
 
-            bool didFail = updateIp( clientSocket, roomId, userId, userIp );
+            bool didOperationFailed = updateIp( clientSocket, roomId, userId, userIp );
 
-            if( didFail )
+            if( didOperationFailed )
             {
                 std::cerr << "Error: UPDATE IP " << std::endl;
             }
@@ -40,11 +40,11 @@ void processRequest(int clientSocket, const std::string& request)
         }
         case LEAVEROOM:
         {
-            bool didFail = leaveRoom( clientSocket, roomId, userId );
+            bool didOperationFailed = leaveRoom( clientSocket, roomId, userId );
 
-            if( didFail )
+            if( didOperationFailed )
             {
-                std::cerr << "Error: LAEVE ROOM " << std::endl;
+                std::cerr << "Error: LEAVE ROOM " << std::endl;
             }
             break;
         }
@@ -53,4 +53,6 @@ void processRequest(int clientSocket, const std::string& request)
             send(clientSocket, "Unknown command.", 16, 0);
             break;
     }
+
+    delete requestData;
 }

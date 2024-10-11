@@ -34,25 +34,23 @@ bool joinRoom(int clientSocket, const std::string& roomId, const std::string& us
 
     const std::vector<RoomMember> members = room->getMembers();
 
-    for( size_t i = 0; i < members.size(); ++i )
+    for (size_t i = 0; i < members.size(); ++i)
     {
         const auto& member = members[i];
-
         response += R"({ "userId": ")" + member.getUserId() + R"(", "userIp": ")" + member.getUserIp() + "\" }";
 
-        if( i < members.size() - 1 )
-        {
+        if (i < members.size() - 1) {
             response += ", ";
         }
-
-        response += "]";
-
-        if( send(clientSocket, response.c_str(), response.size(), 0) == -1 )
-        {
-            std::cerr << "Failed to send response." << std::endl;
-            return true;
-        }
-        return false;
     }
-    return true;
+
+    response += "]";
+
+    if (send(clientSocket, response.c_str(), response.size(), 0) == -1)
+    {
+        std::cerr << "Failed to send response." << std::endl;
+        return true;
+    }
+
+    return false;
 }

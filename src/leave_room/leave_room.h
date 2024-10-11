@@ -9,6 +9,6 @@
 
 #include "../../include/global_variables.h"
 
-bool leaveRoom( int clientSocket, const std::string& roomId, std::string& userId );
+bool leaveRoom( int clientSocket, const std::string& roomId, const std::string& userId );
 
 #endif //LEAVE_ROOM_H
