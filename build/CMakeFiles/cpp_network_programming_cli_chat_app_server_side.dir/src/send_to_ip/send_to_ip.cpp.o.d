@@ -1,6 +1,6 @@
 CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/src/send_to_ip/send_to_ip.cpp.o: \
-  /Users/o.halukkarakaya/desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/send_to_ip/send_to_ip.cpp \
-  /Users/o.halukkarakaya/desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/send_to_ip/send_to_ip.h \
+  /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/send_to_ip/send_to_ip.cpp \
+  /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/send_to_ip/send_to_ip.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__assert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__assertion_handler \
