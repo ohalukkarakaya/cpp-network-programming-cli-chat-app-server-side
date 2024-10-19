@@ -18,19 +18,18 @@ class Room {
 public:
     Room(const std::string& id);
 
-    void userJoined(const std::string& userId, const std::string& userIp);
+                    void                            userJoined(         const std::string& userId, const std::string& userIp );
+                    void                            userLeft(           const std::string& userId                            );
+                    void                            updateUserIp(       const std::string& userId, const std::string& newIp  );
+                    std::optional<RoomMember>       findUser(           const std::string& userId);
+    [[nodiscard]]   const std::string&              getRoomId()  const;
+    [[nodiscard]]   const std::vector<RoomMember>&  getMembers() const;
 
-    void userLeft(const std::string& userId);
-    void updateUserIp( const std::string& userId, const std::string& newIp );
-
-    std::optional<RoomMember> findUser(const std::string& userId);
-
-    [[nodiscard]] const std::string& getRoomId() const;
-    [[nodiscard]] const std::vector<RoomMember>& getMembers() const;
 
 private:
-    std::string roomId;
-    std::vector<RoomMember> members;
+    std::string              roomId;
+    std::vector<RoomMember>  members;
+
 };
 
 #endif //ROOM_H

@@ -8,9 +8,9 @@ RequestData* parseRequest( std::string& rawRequest )
 {
     std::string userId, userIp, roomId;
 
-    size_t firstSlash = rawRequest.find('/');
-    size_t secondSlash = rawRequest.find('/', firstSlash + 1);
-    size_t thirdSlash = rawRequest.find('/', secondSlash + 1);
+    size_t firstSlash  = rawRequest.find('/');
+    size_t secondSlash = rawRequest.find('/',  firstSlash  + 1);
+    size_t thirdSlash  = rawRequest.find('/',  secondSlash + 1);
 
     if( firstSlash == std::string::npos || secondSlash == std::string::npos || thirdSlash == std::string::npos )
     {
@@ -20,12 +20,12 @@ RequestData* parseRequest( std::string& rawRequest )
         return nullptr;
     }
 
-    std::string command = rawRequest.substr(0, firstSlash);
-    userId = rawRequest.substr(firstSlash + 1, secondSlash - firstSlash - 1);
-    userIp = rawRequest.substr(secondSlash + 1, thirdSlash - secondSlash - 1);
-    roomId = rawRequest.substr(thirdSlash + 1);
+    std::string  command = rawRequest.substr(0, firstSlash);
+                 userId  = rawRequest.substr(firstSlash  + 1,  secondSlash - firstSlash  - 1);
+                 userIp  = rawRequest.substr(secondSlash + 1,  thirdSlash  - secondSlash - 1);
+                 roomId  = rawRequest.substr(thirdSlash  + 1);
 
-    auto* data = new RequestData( command, userId, userIp, roomId );
+    auto*  data = new RequestData( command, userId, userIp, roomId );
 
     return data;
 }

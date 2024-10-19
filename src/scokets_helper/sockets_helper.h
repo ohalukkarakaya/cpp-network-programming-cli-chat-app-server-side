@@ -17,9 +17,8 @@
 #endif
 
 void initSockets();
+void closeSocket(   int socket_fd );
+void signalHandler( int signum    );
 
-void closeSocket( int socket_fd );
-
-void signalHandler( int signum );
 
 #endif // SOCKETS_HELPER_H

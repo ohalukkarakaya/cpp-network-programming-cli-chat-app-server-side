@@ -18,10 +18,10 @@ public:
     std::string& getRoomId();
 
 private:
-    std::string command;
-    std::string userId;
-    std::string userIp;
-    std::string roomId;
+    std::string  command;
+    std::string  userId;
+    std::string  userIp;
+    std::string  roomId;
 };
 
 #endif //REQUEST_DATA_H

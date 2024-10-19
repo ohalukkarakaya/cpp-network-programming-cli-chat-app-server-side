@@ -12,12 +12,12 @@ int main()
 {
     running = true;
 
-    signal(SIGINT, signalHandler);
+    signal( SIGINT, signalHandler );
 
-    int server_fd, new_socket;
+    int                server_fd, new_socket;
     struct sockaddr_in address;
-    int opt = 1;
-    int addrlen = sizeof(address);
+    int                opt                       = 1;
+    int                addrlen                   = sizeof(address);
 
     initSockets();
 
@@ -35,26 +35,26 @@ int main()
 #endif
     {
         std::cerr << "setsockopt error!" << strerror(errno) << std::endl;
-        close(server_fd);
-        exit(EXIT_FAILURE);
+        close( server_fd    );
+        exit(  EXIT_FAILURE );
     }
 
-    address.sin_family = AF_INET;
+    address.sin_family      = AF_INET;
     address.sin_addr.s_addr = INADDR_ANY;
-    address.sin_port = htons(PORT);
+    address.sin_port        = htons(PORT);
 
     if (bind(server_fd, (struct sockaddr*)&address, sizeof(address)) < 0)
     {
         std::cerr << "Bind failed!" << std::endl;
-        close(server_fd);
-        exit(EXIT_FAILURE);
+        close( server_fd    );
+        exit(  EXIT_FAILURE );
     }
 
     if (listen(server_fd, 3) < 0)
     {
         std::cerr << "Listen error!" << std::endl;
-        close(server_fd);
-        exit(EXIT_FAILURE);
+        close( server_fd    );
+        exit(  EXIT_FAILURE );
     }
 
     std::cout << "Server is listening on port " << PORT << "..." << std::endl;
@@ -62,12 +62,12 @@ int main()
     while ( running )
     {
         // Set timeout for accept
-        fd_set readfds;
-        FD_ZERO(&readfds);
-        FD_SET(server_fd, &readfds);
+        fd_set    readfds;
+        FD_ZERO(  &readfds            );
+        FD_SET(   server_fd, &readfds );
 
         struct timeval timeout;
-        timeout.tv_sec = 1; // 1 sec
+        timeout.tv_sec  = 1;  // 1 sec
         timeout.tv_usec = 0;
 
         int activity = select(server_fd + 1, &readfds, NULL, NULL, &timeout);

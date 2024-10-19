@@ -15,7 +15,7 @@ void sendToIp(const std::string& ip, const std::string& message, const std::stri
     sockaddr_in serverAddr{};
     std::memset(&serverAddr, 0, sizeof(serverAddr));
     serverAddr.sin_family = AF_INET;
-    serverAddr.sin_port = htons(8080);
+    serverAddr.sin_port   = htons(8080);
     inet_pton(AF_INET, ip.c_str(), &serverAddr.sin_addr);
 
     if (connect(sock, (struct sockaddr*)&serverAddr, sizeof(serverAddr)) < 0)

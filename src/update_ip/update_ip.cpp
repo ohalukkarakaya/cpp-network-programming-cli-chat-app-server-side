@@ -10,8 +10,8 @@ bool updateIp( int clientSocket, const std::string& roomId, const std::string& u
     {
         if (room.getRoomId() == roomId)
         {
-            room.updateUserIp(userId, userIp);
-            send(clientSocket, "IP updated successfully.", 23, 0);
+            room.updateUserIp( userId, userIp );
+            send( clientSocket, "IP updated successfully.", 23, 0 );
             return false;
         }
     }
