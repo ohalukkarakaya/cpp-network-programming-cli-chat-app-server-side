@@ -46,4 +46,7 @@ add_executable(
         
         src/get_rooms/get_rooms.h
         src/get_rooms/get_rooms.cpp
+
+        src/get_ip_adress/get_ip_adress.cpp
+        src/get_ip_adress/get_ip_adress.h
 )

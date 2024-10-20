@@ -249,6 +249,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/build.make CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/get_ip_adress/get_ip_adress.o: src/get_ip_adress/get_ip_adress.cpp.o
+.PHONY : src/get_ip_adress/get_ip_adress.o
+
+# target to build an object file
+src/get_ip_adress/get_ip_adress.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/build.make CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/src/get_ip_adress/get_ip_adress.cpp.o
+.PHONY : src/get_ip_adress/get_ip_adress.cpp.o
+
+src/get_ip_adress/get_ip_adress.i: src/get_ip_adress/get_ip_adress.cpp.i
+.PHONY : src/get_ip_adress/get_ip_adress.i
+
+# target to preprocess a source file
+src/get_ip_adress/get_ip_adress.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/build.make CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/src/get_ip_adress/get_ip_adress.cpp.i
+.PHONY : src/get_ip_adress/get_ip_adress.cpp.i
+
+src/get_ip_adress/get_ip_adress.s: src/get_ip_adress/get_ip_adress.cpp.s
+.PHONY : src/get_ip_adress/get_ip_adress.s
+
+# target to generate assembly for a file
+src/get_ip_adress/get_ip_adress.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/build.make CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/src/get_ip_adress/get_ip_adress.cpp.s
+.PHONY : src/get_ip_adress/get_ip_adress.cpp.s
+
 src/get_rooms/get_rooms.o: src/get_rooms/get_rooms.cpp.o
 .PHONY : src/get_rooms/get_rooms.o
 
@@ -489,6 +513,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/get_ip_adress/get_ip_adress.o"
+	@echo "... src/get_ip_adress/get_ip_adress.i"
+	@echo "... src/get_ip_adress/get_ip_adress.s"
 	@echo "... src/get_rooms/get_rooms.o"
 	@echo "... src/get_rooms/get_rooms.i"
 	@echo "... src/get_rooms/get_rooms.s"

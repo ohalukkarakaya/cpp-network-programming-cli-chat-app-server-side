@@ -5,6 +5,7 @@
 
 #include "src/scokets_helper/sockets_helper.h"
 #include "src/handle_client/handle_client.h"
+#include "src/get_ip_adress/get_ip_adress.h"
 
 #define PORT 8080
 
@@ -58,6 +59,9 @@ int main()
     }
 
     std::cout << "Server is listening on port " << PORT << "..." << std::endl;
+
+    std::string ipAdress = getIPAddress();
+    std::cout << "ip adress is: " << ipAdress << std::endl;
 
     while ( running )
     {

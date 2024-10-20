@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/Models/room_member/room_member.cpp.o.d"
   "CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/main.cpp.o"
   "CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/main.cpp.o.d"
+  "CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/src/get_ip_adress/get_ip_adress.cpp.o"
+  "CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/src/get_ip_adress/get_ip_adress.cpp.o.d"
   "CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/src/get_rooms/get_rooms.cpp.o"
   "CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/src/get_rooms/get_rooms.cpp.o.d"
   "CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/src/handle_client/handle_client.cpp.o"
