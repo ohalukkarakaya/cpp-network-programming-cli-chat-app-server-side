@@ -981,16 +981,18 @@ CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/src/handle_clien
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/netinet6/in6.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../scokets_helper/../../include/../Models/room/../../src/scokets_helper/sockets_helper.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/process_request.h \
-  /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../../include/global_variables.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../../Models/request_type_enum/request_type_enum.h \
+  /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../../include/global_variables.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../parse_request/parse_request.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../parse_request/../../include/global_variables.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../parse_request/../../Models/request_data/request_data.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../parse_request/../../Models/request_type_enum/request_type_enum.h \
+  /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../get_rooms/get_rooms.h \
+  /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../get_rooms/../../include/global_variables.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../join_room/join_room.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../join_room/../../include/global_variables.h \
+  /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../leave_room/leave_room.h \
+  /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../leave_room/../../include/global_variables.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../update_ip/update_ip.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../update_ip/../../include/global_variables.h \
-  /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../update_ip/../../Models/request_data/request_data.h \
-  /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../leave_room/leave_room.h \
-  /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../leave_room/../../include/global_variables.h
+  /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../update_ip/../../Models/request_data/request_data.h

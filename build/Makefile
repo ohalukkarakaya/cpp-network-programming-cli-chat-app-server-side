@@ -249,6 +249,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/build.make CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/get_rooms/get_rooms.o: src/get_rooms/get_rooms.cpp.o
+.PHONY : src/get_rooms/get_rooms.o
+
+# target to build an object file
+src/get_rooms/get_rooms.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/build.make CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/src/get_rooms/get_rooms.cpp.o
+.PHONY : src/get_rooms/get_rooms.cpp.o
+
+src/get_rooms/get_rooms.i: src/get_rooms/get_rooms.cpp.i
+.PHONY : src/get_rooms/get_rooms.i
+
+# target to preprocess a source file
+src/get_rooms/get_rooms.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/build.make CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/src/get_rooms/get_rooms.cpp.i
+.PHONY : src/get_rooms/get_rooms.cpp.i
+
+src/get_rooms/get_rooms.s: src/get_rooms/get_rooms.cpp.s
+.PHONY : src/get_rooms/get_rooms.s
+
+# target to generate assembly for a file
+src/get_rooms/get_rooms.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/build.make CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/src/get_rooms/get_rooms.cpp.s
+.PHONY : src/get_rooms/get_rooms.cpp.s
+
 src/handle_client/handle_client.o: src/handle_client/handle_client.cpp.o
 .PHONY : src/handle_client/handle_client.o
 
@@ -465,6 +489,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/get_rooms/get_rooms.o"
+	@echo "... src/get_rooms/get_rooms.i"
+	@echo "... src/get_rooms/get_rooms.s"
 	@echo "... src/handle_client/handle_client.o"
 	@echo "... src/handle_client/handle_client.i"
 	@echo "... src/handle_client/handle_client.s"
