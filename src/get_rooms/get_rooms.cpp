@@ -1,7 +1,12 @@
 #include "get_rooms.h"
 
 bool get_rooms(int clientSocket) {
-  std::string response = "[";
+  std::string response = "No active room";
+
+  if( !active_rooms.empty() ){
+      response = "";
+  }
+
   for (auto &room : active_rooms) {
     response += room.getRoomId() + R"(", ")";
   }

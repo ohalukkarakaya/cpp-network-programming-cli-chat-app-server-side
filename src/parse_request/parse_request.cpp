@@ -25,6 +25,9 @@ RequestData* parseRequest( std::string& rawRequest )
                  userIp  = rawRequest.substr(secondSlash + 1,  thirdSlash  - secondSlash - 1);
                  roomId  = rawRequest.substr(thirdSlash  + 1);
 
+    std::cout << "rawRequest: " << rawRequest << std::endl;
+    std::cout << "command: " << command << std::endl;
+
     auto*  data = new RequestData( command, userId, userIp, roomId );
 
     return data;
