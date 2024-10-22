@@ -10,6 +10,12 @@ void processRequest(int clientSocket, const std::string &request) {
   std::string mutableRequest = request;
   RequestData *requestData = parseRequest(mutableRequest);
 
+  if( requestData->getCommand() == "" )
+  {
+      delete requestData;
+      return;
+  }
+
   Command cmdType = getCommandType(requestData->getCommand());
   std::string roomId = requestData->getRoomId();
   std::string userId = requestData->getUserId();

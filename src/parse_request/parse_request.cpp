@@ -3,7 +3,7 @@
 RequestData* parseRequest(std::string& rawRequest) {
     std::string type, command, userId, userIp, roomId;
 
-    // İlk ":" karakterini bul
+    // find first ":"
     size_t colonPos = rawRequest.find(':');
 
     if (colonPos == std::string::npos) {
@@ -12,18 +12,27 @@ RequestData* parseRequest(std::string& rawRequest) {
         return nullptr;
     }
 
-    // Type kısmını al
+    // get type
     type = rawRequest.substr(0, colonPos);
+
+    Command typeValue = getCommandType( type );
+    if( typeValue == UNKNOWN )
+    {
+        // turn empty request data
+        return new RequestData("", "", "", "");
+    }
 
     // Geri kalan kısmı işle
     std::string remainingRequest = rawRequest.substr(colonPos + 1);
 
     // Kalan kısmı '/' karakterlerine göre parçala
-    size_t firstSlash = remainingRequest.find('/');
-    size_t secondSlash = remainingRequest.find('/', firstSlash + 1);
-    size_t thirdSlash = remainingRequest.find('/', secondSlash + 1);
+    size_t firstSlash  = remainingRequest.find('/');
+    size_t secondSlash = remainingRequest.find('/',  firstSlash  + 1);
+    size_t thirdSlash  = remainingRequest.find('/',  secondSlash + 1);
 
-    if (firstSlash == std::string::npos || secondSlash == std::string::npos || thirdSlash == std::string::npos) {
+
+    if (firstSlash == std::string::npos || secondSlash == std::string::npos || thirdSlash == std::string::npos)
+    {
         std::cerr << "Missing Parameter" << std::endl;
         running = false;
         return nullptr;
@@ -34,12 +43,8 @@ RequestData* parseRequest(std::string& rawRequest) {
     userIp = remainingRequest.substr(secondSlash + 1, thirdSlash - secondSlash - 1);
     roomId = remainingRequest.substr(thirdSlash + 1);
 
-    std::cout << "remainingRequest: " << remainingRequest << std::endl;
-    std::cout << "type: " << type << std::endl;
-    std::cout << "command: " << command << std::endl;
-    std::cout << "userId: " << userId << std::endl;
-    std::cout << "roomId: " << roomId << std::endl;
+    std::cout << "request received: " << remainingRequest << std::endl;
 
-    auto* data = new RequestData(type, userId, userIp, roomId);
+    auto* data = new RequestData(command, userId, userIp, roomId);
     return data;
 }
