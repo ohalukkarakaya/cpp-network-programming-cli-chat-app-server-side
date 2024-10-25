@@ -27,7 +27,11 @@ void Room::userLeft(const std::string& userId)
         if (members.empty())
         {
             std::cout << "Room " << roomId << " is now empty and will be deleted." << std::endl;
-           //get_room_manager().deleteRoom(roomId); TO DO
+            auto it = std::remove_if(active_rooms.begin(), active_rooms.end(),
+                                     [roomId = this->roomId](const Room& room) {
+                                         return room.getRoomId() == roomId;
+                                     });
+            active_rooms.erase(it, active_rooms.end());
         }
     }
 }
