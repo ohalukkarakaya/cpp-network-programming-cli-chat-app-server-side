@@ -77,7 +77,7 @@ int main()
         int activity = select(server_fd + 1, &readfds, NULL, NULL, &timeout);
 
         if (activity < 0) {
-            std::cerr << "Select error!" << std::endl;
+            if(running) std::cerr << "Select error!" << std::endl;
             continue;
         }
 
