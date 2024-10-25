@@ -1,7 +1,3 @@
-//
-// Created by Ö. Haluk KARAKAYA on 3.10.2024.
-//
-
 #ifndef SOCKETS_HELPER_H
 #define SOCKETS_HELPER_H
 

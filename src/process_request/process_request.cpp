@@ -1,25 +1,23 @@
-//
-// Created by Ö. Haluk KARAKAYA on 1.10.2024.
-//
-
 #include "process_request.h"
 #include <ostream>
 
-void processRequest(int clientSocket, const std::string &request) {
+void processRequest(int clientSocket, const std::string &request, RequestData& requestData) {
 
   std::string mutableRequest = request;
-  RequestData *requestData = parseRequest(mutableRequest);
+  RequestData *parsedData = parseRequest(mutableRequest);
 
-  if( requestData->getCommand() == "" )
+  if( parsedData->getCommand() == "" )
   {
-      delete requestData;
+      delete parsedData;
       return;
   }
 
-  Command cmdType = getCommandType(requestData->getCommand());
-  std::string roomId = requestData->getRoomId();
-  std::string userId = requestData->getUserId();
-  std::string userIp = requestData->getUserIp();
+  requestData = *parsedData;
+
+  Command cmdType = getCommandType(requestData.getCommand());
+  std::string roomId = requestData.getRoomId();
+  std::string userId = requestData.getUserId();
+  std::string userIp = requestData.getUserIp();
 
   switch (cmdType) {
   case GETROOMS: {
@@ -61,5 +59,5 @@ void processRequest(int clientSocket, const std::string &request) {
     break;
   }
 
-  delete requestData;
+  delete parsedData;
 }

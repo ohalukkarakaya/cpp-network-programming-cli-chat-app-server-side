@@ -960,6 +960,14 @@ CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/src/join_room/jo
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/join_room/../../include/global_variables.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/join_room/../../include/../Models/room/room.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/join_room/../../include/../Models/room/../room_member/room_member.h \
+  /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/join_room/../../include/../Models/room/../../src/scokets_helper/sockets_helper.h \
+  /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/join_room/../../include/../Models/room/../../src/scokets_helper/../../include/global_variables.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/unistd.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_posix_vdisable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/select.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_select.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_uuid_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/gethostuuid.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/join_room/../../include/../Models/room/../../src/send_to_ip/send_to_ip.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/arpa/inet.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/netinet/in.h \
@@ -971,12 +979,4 @@ CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/src/join_room/jo
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_sa_family_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_socklen_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_iovec_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/netinet6/in6.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/unistd.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_posix_vdisable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/select.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_select.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_uuid_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/gethostuuid.h \
-  /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/join_room/../../include/../Models/room/../../src/scokets_helper/sockets_helper.h \
-  /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/join_room/../../include/../Models/room/../../src/scokets_helper/../../include/global_variables.h
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/netinet6/in6.h

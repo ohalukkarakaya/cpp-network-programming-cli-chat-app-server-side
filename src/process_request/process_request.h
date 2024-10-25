@@ -18,6 +18,6 @@
 #include "../leave_room/leave_room.h"
 #include "../update_ip/update_ip.h"
 
-void processRequest(int clientSocket, const std::string &request);
+void processRequest(int clientSocket, const std::string &request, RequestData& requestData);
 
 #endif // PROCESS_REQUEST_H

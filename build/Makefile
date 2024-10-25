@@ -201,6 +201,30 @@ Models/room/room.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/build.make CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/Models/room/room.cpp.s
 .PHONY : Models/room/room.cpp.s
 
+Models/room_manager/room_manager.o: Models/room_manager/room_manager.cpp.o
+.PHONY : Models/room_manager/room_manager.o
+
+# target to build an object file
+Models/room_manager/room_manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/build.make CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/Models/room_manager/room_manager.cpp.o
+.PHONY : Models/room_manager/room_manager.cpp.o
+
+Models/room_manager/room_manager.i: Models/room_manager/room_manager.cpp.i
+.PHONY : Models/room_manager/room_manager.i
+
+# target to preprocess a source file
+Models/room_manager/room_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/build.make CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/Models/room_manager/room_manager.cpp.i
+.PHONY : Models/room_manager/room_manager.cpp.i
+
+Models/room_manager/room_manager.s: Models/room_manager/room_manager.cpp.s
+.PHONY : Models/room_manager/room_manager.s
+
+# target to generate assembly for a file
+Models/room_manager/room_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/build.make CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/Models/room_manager/room_manager.cpp.s
+.PHONY : Models/room_manager/room_manager.cpp.s
+
 Models/room_member/room_member.o: Models/room_member/room_member.cpp.o
 .PHONY : Models/room_member/room_member.o
 
@@ -507,6 +531,9 @@ help:
 	@echo "... Models/room/room.o"
 	@echo "... Models/room/room.i"
 	@echo "... Models/room/room.s"
+	@echo "... Models/room_manager/room_manager.o"
+	@echo "... Models/room_manager/room_manager.i"
+	@echo "... Models/room_manager/room_manager.s"
 	@echo "... Models/room_member/room_member.o"
 	@echo "... Models/room_member/room_member.i"
 	@echo "... Models/room_member/room_member.s"

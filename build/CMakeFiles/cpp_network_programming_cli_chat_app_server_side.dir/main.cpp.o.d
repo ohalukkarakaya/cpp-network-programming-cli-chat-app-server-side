@@ -1001,6 +1001,7 @@ CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/main.cpp.o: \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/scokets_helper/../../include/global_variables.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/scokets_helper/../../include/../Models/room/room.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/scokets_helper/../../include/../Models/room/../room_member/room_member.h \
+  /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/scokets_helper/../../include/../Models/room/../../src/scokets_helper/sockets_helper.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/scokets_helper/../../include/../Models/room/../../src/send_to_ip/send_to_ip.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/arpa/inet.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/unistd.h \
@@ -1009,7 +1010,6 @@ CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_select.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_uuid_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/gethostuuid.h \
-  /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/scokets_helper/../../include/../Models/room/../../src/scokets_helper/sockets_helper.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/handle_client.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../scokets_helper/sockets_helper.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/process_request.h \
@@ -1025,6 +1025,7 @@ CMakeFiles/cpp_network_programming_cli_chat_app_server_side.dir/main.cpp.o: \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../join_room/../../include/global_variables.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../leave_room/leave_room.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../leave_room/../../include/global_variables.h \
+  /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../leave_room/../send_to_ip/send_to_ip.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../update_ip/update_ip.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../update_ip/../../include/global_variables.h \
   /Users/o.halukkarakaya/Desktop/dosyalar/code_2024/network_programming/cpp-network-programming-cli-chat-app-server-side/src/handle_client/../process_request/../update_ip/../../Models/request_data/request_data.h \

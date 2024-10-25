@@ -1,10 +1,6 @@
-//
-// Created by Ö. Haluk KARAKAYA on 30.09.2024.
-//
-
 #include "send_to_ip.h"
 
-void sendToIp(const std::string& ip, const std::string& message, const std::string& type)
+void sendToIp(const std::string& ip, const std::string& message, const std::string& type, int port)
 {
     int sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock < 0) {
@@ -15,7 +11,7 @@ void sendToIp(const std::string& ip, const std::string& message, const std::stri
     sockaddr_in serverAddr{};
     std::memset(&serverAddr, 0, sizeof(serverAddr));
     serverAddr.sin_family = AF_INET;
-    serverAddr.sin_port   = htons(8080);
+    serverAddr.sin_port   = htons(port);
     inet_pton(AF_INET, ip.c_str(), &serverAddr.sin_addr);
 
     if (connect(sock, (struct sockaddr*)&serverAddr, sizeof(serverAddr)) < 0)

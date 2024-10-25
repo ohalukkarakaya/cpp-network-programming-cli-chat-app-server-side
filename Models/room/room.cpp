@@ -1,10 +1,4 @@
-//
-// Created by Ö. Haluk KARAKAYA on 30.09.2024.
-//
-
 #include "room.h"
-
-Room::Room(const std::string& id) : roomId(id) {}
 
 void Room::userJoined(const std::string& userId, const std::string& userIp)
 {
@@ -33,6 +27,7 @@ void Room::userLeft(const std::string& userId)
         if (members.empty())
         {
             std::cout << "Room " << roomId << " is now empty and will be deleted." << std::endl;
+           //get_room_manager().deleteRoom(roomId); TO DO
         }
     }
 }

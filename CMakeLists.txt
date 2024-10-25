@@ -49,4 +49,7 @@ add_executable(
 
         src/get_ip_adress/get_ip_adress.cpp
         src/get_ip_adress/get_ip_adress.h
+
+        Models/room_manager/room_manager.h
+        Models/room_manager/room_manager.cpp
 )

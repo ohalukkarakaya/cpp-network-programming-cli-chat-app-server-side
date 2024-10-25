@@ -19,7 +19,7 @@ RequestData* parseRequest(std::string& rawRequest) {
     if( typeValue == UNKNOWN )
     {
         // turn empty request data
-        return new RequestData("", "", "", "");
+        return new RequestData();
     }
 
     // Geri kalan kısmı işle

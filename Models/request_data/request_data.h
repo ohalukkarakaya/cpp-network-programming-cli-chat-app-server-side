@@ -10,7 +10,10 @@
 class RequestData
 {
 public:
-    RequestData(std::string command, std::string userId, std::string userIp, std::string roomId);
+    RequestData() : roomId(""), userId(""), userIp(""), command("") {}
+
+    RequestData(const std::string& cmd, const std::string& uId, const std::string& uIp, const std::string& rId)
+            : command(cmd), userId(uId), userIp(uIp), roomId(rId) {}
 
     std::string& getCommand();
     std::string& getUserId();
