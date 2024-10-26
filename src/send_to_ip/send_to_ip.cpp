@@ -21,7 +21,7 @@ void sendToIp(const std::string& ip, const std::string& message, const std::stri
         return;
     }
 
-    std::string fullMessage = type + ": " + message;
+    std::string fullMessage = type + ":" + message;
     send(sock, fullMessage.c_str(), fullMessage.size(), 0);
     close(sock);
 }
